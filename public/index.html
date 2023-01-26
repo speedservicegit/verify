@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="css/index.css">
+
+    <title>Verification</title>
+</head>
+
+<body>
+    <div class="center">
+        <div class="container" id="mobileenter">
+            <label for="show" class="close-btn fas fa-times" title="close"></label>
+            <div class="text">Welcome to <br><i>Speed Service</i></div><br><br><br><br>
+            <form action="#">
+                
+                <div class="input-container">
+                    <input type="number" id="mobilenum" required=""/>
+                    <label>Mobile number</label>		
+                </div>
+
+                <div class="recaptcha">
+                    <div class="recap" id="recaptcha-container"></div>
+                </div>
+
+                <p id="success" style="color: green";></p>
+                <p id="error" align="center" style="color: red";></p>
+
+                <div class="btn">
+                    <div class="inner">
+                    </div>
+                    <button onclick="login()" type="button">send OTP</button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+
+    
+    <div class="center">
+        <div class="container1" id="otpenter">
+            <label for="show" class="close-btn fas fa-times" title="close"></label>
+            <div class="text">Welcome to <br><i>Speed Service</i></div><br><br><br><br>
+            <form action="#">
+                
+                <div class="input-container">
+                    <input type="number" id="otpvalue" autocomplete="off" required=""/>
+                    <label>Enter OTP</label>		
+                </div> 
+                
+                <p id="errorotp" align="center" style="color: red";></p>
+
+                <div class="btn">
+                    <div class="inner">
+                    </div>
+                    <button type="button" onclick="verify()">Verify</button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("otpenter").style.visibility = "hidden";
+    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
